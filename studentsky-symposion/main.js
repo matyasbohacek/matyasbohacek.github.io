@@ -17,19 +17,19 @@ async function init() {
 
             for (let j = 0; j < data[i].length; j++) {
 
-              if (data[i][j] == undefined) {
-                  continue;
-              }
-
                 if (i > 1 && data[i][j] == data[i-1][j]) {
                     lookup[i + "," + j] = lookup[(i-1) + "," + j]
                     lookup[i + "," + j].rowSpan += 1;
                 } else {
                     let elem = document.createElement((i == 0 || j == 0) ? "th" : "td");
 
-                    console.log(i);
-                    console.log(j);
-                    console.log("-");
+                    if (data[i][j] == undefined) {
+                        elem.innerHTML = "–";
+                        elem.style.textAlign = "center";
+                        lookup[i + "," + j] = elem;
+                        tr.appendChild(elem);
+                        continue;
+                    }
 
                     lookup_ids[data[i][j]] = data[i][j].toLowerCase().replaceAll(",", "").replaceAll(" ", "_");
 
