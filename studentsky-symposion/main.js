@@ -53,17 +53,15 @@ async function init() {
     let summaries = document.getElementById("anotace");
     for (let i = 0; i < summary_data.length; i++) {
         if (i != 0 && summary_data[i][0] && lookup_ids[summary_data[i][0]]) {
-            let h = document.createElement("h3");
-            h.innerHTML = summary_data[i][0];
-            h.id = lookup_ids[summary_data[i][0]];
+            let h = "<h3 id=\"" + ookup_ids[summary_data[i][0]] + "\">" + summary_data[i][0] + "</h3>";
 
             let article = document.createElement("article");
             article.innerHTML = h + summary_data[i][1];
 
             if (summary_data[i][2].includes("\n")) {
-                article.innerHTML += "<hr /><kbd>" + summary_data[i][2].replace("\n", "</kbd>");
+                article.innerHTML += "<hr /><i>" + summary_data[i][2].replace("\n", "</i>");
             } else {
-                article.innerHTML += "<hr /><kbd>" + summary_data[i][2] + "</kbd>";
+                article.innerHTML += "<hr /><i>" + summary_data[i][2] + "</i>";
             }
 
             // summaries.appendChild(h);
