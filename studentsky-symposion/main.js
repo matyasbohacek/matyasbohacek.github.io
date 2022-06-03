@@ -58,14 +58,12 @@ async function init() {
             h.id = lookup_ids[summary_data[i][0]];
 
             let article = document.createElement("article");
-            article.appendChild(h);
-            
-            article.innerHTML = summary_data[i][1];
+            article.innerHTML = h + summary_data[i][1];
 
             if (summary_data[i][2].includes("\n")) {
-                article.innerHTML += "<hr /><h4>" + summary_data[i][2].replace("\n", "</h4>");
+                article.innerHTML += "<hr /><kbd>" + summary_data[i][2].replace("\n", "</kbd>");
             } else {
-                article.innerHTML += "<hr /><h4>" + summary_data[i][2] + "</h4>";
+                article.innerHTML += "<hr /><kbd>" + summary_data[i][2] + "</kbd>";
             }
 
             // summaries.appendChild(h);
