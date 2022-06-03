@@ -17,6 +17,10 @@ async function init() {
 
             for (let j = 0; j < data[i].length; j++) {
 
+              if (data[i][j] == undefined) {
+                  continue;
+              }
+
                 if (i > 1 && data[i][j] == data[i-1][j]) {
                     lookup[i + "," + j] = lookup[(i-1) + "," + j]
                     lookup[i + "," + j].rowSpan += 1;
