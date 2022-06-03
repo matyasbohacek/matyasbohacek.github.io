@@ -53,7 +53,7 @@ async function init() {
     let summaries = document.getElementById("anotace");
     for (let i = 0; i < summary_data.length; i++) {
         if (i != 0 && summary_data[i][0] && lookup_ids[summary_data[i][0]]) {
-            let h = "<h3 id=\"" + ookup_ids[summary_data[i][0]] + "\">" + summary_data[i][0] + "</h3>";
+            let h = "<h3 id=\"" + lookup_ids[summary_data[i][0]] + "\">" + summary_data[i][0] + "</h3>";
 
             let article = document.createElement("article");
             article.innerHTML = h + summary_data[i][1];
