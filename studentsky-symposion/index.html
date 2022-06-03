@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+
+		<title>Rusko a Ukrajina</title>
+		<script src="main.js"></script>
+
+		<style>
+			article {
+				white-space: pre-wrap;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			table#harmonogram td {
+				border: var(--border-width) solid var(--table-border-color);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="container">
+			<h1>Rusko a Ukrajina</h1>
+			<p>Program proběhne 2. března 2022.</p>
+
+			<h2>Harmonogram</h2>
+			<table id="harmonogram">
+			</table>
+
+			<h2>Anotace a medailony</h2>
+			<div id="anotace">
+			</div>
+		</main>
+	</body>
+</html>
