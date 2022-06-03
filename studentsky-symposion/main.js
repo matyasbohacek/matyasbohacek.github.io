@@ -59,7 +59,7 @@ async function init() {
             article.innerHTML = h + "<b>" + summary_data[i][1] + "</b>" ;
 
             if (summary_data[i][2].includes("\n")) {
-                article.innerHTML += "<i>" + summary_data[i][2].replace("\n", "</i>") + "<hr />";
+                article.innerHTML += "  <i>" + summary_data[i][2].replace("\n", "</i><hr />");
             } else {
                 article.innerHTML += "<hr />" + summary_data[i][2] + "";
             }
