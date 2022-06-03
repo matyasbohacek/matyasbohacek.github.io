@@ -56,12 +56,12 @@ async function init() {
             let h = "<h3 id=\"" + lookup_ids[summary_data[i][0]] + "\">" + summary_data[i][0] + "</h3>";
 
             let article = document.createElement("article");
-            article.innerHTML = h + summary_data[i][1];
+            article.innerHTML = h + "<b>" + summary_data[i][1] + "</b>" ;
 
             if (summary_data[i][2].includes("\n")) {
-                article.innerHTML += "<hr /><i>" + summary_data[i][2].replace("\n", "</i>");
+                article.innerHTML += "<i>" + summary_data[i][2].replace("\n", "</i>") + "<hr />";
             } else {
-                article.innerHTML += "<hr /><i>" + summary_data[i][2] + "</i>";
+                article.innerHTML += "<hr />" + summary_data[i][2] + "";
             }
 
             // summaries.appendChild(h);
