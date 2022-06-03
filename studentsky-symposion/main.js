@@ -1,7 +1,7 @@
 async function init() {
     const [schedule, summary] = await Promise.all([
-        fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRwNWexcgRAoVVpEeio1hUXqNVpJBLUJPXcKm-nRhAz4V3CHcbI_1pOhi6IULww8Z0hG8AiEpyl36rz/pub?gid=1969437438&single=true&output=csv"),
-        fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRwNWexcgRAoVVpEeio1hUXqNVpJBLUJPXcKm-nRhAz4V3CHcbI_1pOhi6IULww8Z0hG8AiEpyl36rz/pub?gid=601483375&single=true&output=csv"),
+        fetch("https://docs.google.com/spreadsheets/d/1F0_pELbHQQw73UQvZ2LeJwHMKPSmhZfyyvge3XT5NlI/gviz/tq?tqx=out:csv&sheet=Mistnosti"),
+        fetch("https://docs.google.com/spreadsheets/d/1F0_pELbHQQw73UQvZ2LeJwHMKPSmhZfyyvge3XT5NlI/gviz/tq?tqx=out:csv&sheet=Anotace"),
     ]);
 
     const data = CSVToArray(await schedule.text());
