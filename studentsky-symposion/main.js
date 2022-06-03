@@ -23,6 +23,10 @@ async function init() {
                 } else {
                     let elem = document.createElement((i == 0 || j == 0) ? "th" : "td");
 
+                    console.log(i);
+                    console.log(j);
+                    console.log("-");
+
                     lookup_ids[data[i][j]] = data[i][j].toLowerCase().replaceAll(",", "").replaceAll(" ", "_");
 
                     if (data[i][j] == "") {
