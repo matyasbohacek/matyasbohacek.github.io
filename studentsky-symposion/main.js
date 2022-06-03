@@ -56,7 +56,10 @@ async function init() {
             let h = document.createElement("h3");
             h.innerHTML = summary_data[i][0];
             h.id = lookup_ids[summary_data[i][0]];
+
             let article = document.createElement("article");
+            article.appendChild(h);
+            
             article.innerHTML = summary_data[i][1];
 
             if (summary_data[i][2].includes("\n")) {
@@ -65,7 +68,7 @@ async function init() {
                 article.innerHTML += "<hr /><h4>" + summary_data[i][2] + "</h4>";
             }
 
-            summaries.appendChild(h);
+            // summaries.appendChild(h);
             summaries.appendChild(article);
         }
     }
