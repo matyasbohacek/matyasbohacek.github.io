@@ -40,6 +40,10 @@ async function init() {
                         elem.innerHTML = '<a href="#' + lookup_ids[data[i][j]] + '">' + data[i][j] + "</a>";
                     } else {
                         elem.innerHTML = data[i][j];
+                        if (i != 0 || (j == 0)) {
+                            elem.classList.add("sticky-left")
+                        }
+
                     }
                     lookup[i + "," + j] = elem;
 
