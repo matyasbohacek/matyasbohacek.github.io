@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap" rel="stylesheet">
+		<title>Studentský Symposion 2023: Mosty</title>
+		<script src="main.js"></script>
+
+		<style>
+
+			* {
+				font-family: 'Golos Text', sans-serif;
+			}
+
+			h1, h2, h3 {
+				font-family: 'Golos Text', sans-serif;
+			}
+
+			article {
+				white-space: pre-wrap;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			table#harmonogram td {
+				border: var(--border-width) solid var(--table-border-color);
+			}
+
+
+			.sticky-left {
+				position: sticky;
+				left: 0;
+				background-color: white;
+				box-shadow: inset -1px -1px 0 var(--table-border-color)
+			}
+		</style>
+	</head>
+	<body>
+			<main class="container">
+
+			<h1><span style="font-family: 'Climate Crisis', cursive; font-weight: *; font-size: 3em !important; font-weight: 400 !important;">Mosty</span></h1>
+			<h2 style="font-weight: 400; margin-top: -2.5em;">STUDENTSKÝ SYMPOSION</h2>
+
+			<p style="margin-bottom: 5px;"><b>KDY?</b> Středa 15. 3., 8:30–15:00</p>
+			<p><b>KDE?</b> Gymnázium Jana Keplera</p>
+
+			<p></p>
+			<p>Ozvěny letošního Symposionu, jehož spojujícím prvkem byly mosty, již brzy zaplní chodby Parléřky a Hládkova. V rámci Studentského Symposionu převezmou taktovku studenti, kteří svým spolužákům nachystali workshopy, přednášky a umělecké aktivity. Spojující prvek, přechod, změna, vývoj. Mosty, podruhé...</p>
+			<p>Akce je přístupná <b>výhradně studentům GJK</b>. Nezapomeňte zkontrolovat doporučenou přístupnost akcí, kterou naleznete v jednotlivých anotacích.</p>
+
+			<h2>Harmonogram</h2>
+			<p>Pro zobrazení celého harmonogramu <b>scrolluj do stran.</b></p>
+			<figure>
+				<table id="harmonogram">
+				</table>
+			</figure>
+
+			<h2>Anotace</h2>
+			<div id="anotace">
+			</div>
+
+			<p>Web: Matyáš Boháček. Template: Lukáš Veškrna. Content: Kryštof Miča.</p>
+		</main>
+	</body>
+</html>
